@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bq6krxfsjeb1"]
+
+[ext_resource type="PackedScene" uid="uid://ch0feiv7ee08n" path="res://door.tscn" id="1_jg0dc"]
+[ext_resource type="PackedScene" uid="uid://b653orpt1qryy" path="res://button.tscn" id="2_nmjpi"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nmjpi"]
+sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+ground_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
+
+[sub_resource type="Sky" id="Sky_xdadj"]
+sky_material = SubResource("ProceduralSkyMaterial_nmjpi")
+
+[sub_resource type="Environment" id="Environment_1y8me"]
+background_mode = 2
+sky = SubResource("Sky_xdadj")
+glow_enabled = true
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a72st"]
+albedo_color = Color(0.27572107, 0.47470552, 0.22683117, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c52ky"]
+material = SubResource("StandardMaterial3D_a72st")
+
+[node name="Level2" type="Node3D" unique_id=1882312600]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1838010753]
+environment = SubResource("Environment_1y8me")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1628211052]
+transform = Transform3D(-0.8660254, -0.43301278, 0.25, 0, 0.49999997, 0.86602545, -0.50000006, 0.75, -0.43301266, 0, 0, 0)
+shadow_enabled = true
+
+[node name="Floor" type="MeshInstance3D" parent="." unique_id=559876222]
+transform = Transform3D(3, 0, 0, 0, 0.05, 0, 0, 0, 5, 0, 0, 0)
+mesh = SubResource("BoxMesh_c52ky")
+
+[node name="Door" parent="." unique_id=50553389 instance=ExtResource("1_jg0dc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.61591643, 0)
+
+[node name="Button" parent="Door" unique_id=839960816 instance=ExtResource("2_nmjpi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05179715, -0.015491188, -0.09889144)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1818921757]
+transform = Transform3D(0.56649816, 0, -0.824063, 0, 1, 0, 0.824063, 0, 0.56649816, -0.97468543, 0.5222589, 0.41368926)

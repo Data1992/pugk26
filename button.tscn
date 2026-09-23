@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://b653orpt1qryy"]
+
+[ext_resource type="Script" uid="uid://buoyqj2tjgnmw" path="res://button.gd" id="1_r04n3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qkpic"]
+albedo_color = Color(0.26878795, 0.48259377, 0.98655814, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_c52ky"]
+material = SubResource("StandardMaterial3D_qkpic")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_c52ky"]
+size = Vector3(0.07449341, 0.06616211, 0.051452637)
+
+[node name="Button" type="Node3D" unique_id=839960816]
+script = ExtResource("1_r04n3")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=414449852]
+transform = Transform3D(0.061846036, 0, 0, 0, 0.048615605, 0, 0, 0, 0.033969592, 0, 0, 0)
+mesh = SubResource("BoxMesh_c52ky")
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1547999760]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1250491814]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.000289917, 0.00061035156, 0.0017706305)
+shape = SubResource("BoxShape3D_c52ky")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
