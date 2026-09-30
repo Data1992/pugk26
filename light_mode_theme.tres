@@ -1,0 +1,16 @@
+[gd_resource type="Theme" format=3 uid="uid://da5p8qlo45n8s"]
+
+[ext_resource type="Texture2D" uid="uid://bph3y2mwnqukp" path="res://icon.svg" id="1_iy4av"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ktt6o"]
+texture = ExtResource("1_iy4av")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w37m7"]
+bg_color = Color(0.9283934, 0.7370262, 0.57422024, 0.2784314)
+
+[resource]
+Button/colors/font_color = Color(1, 0.101960786, 0.24313726, 1)
+Button/styles/hover = SubResource("StyleBoxTexture_ktt6o")
+Button/styles/normal = SubResource("StyleBoxFlat_w37m7")
+PrimaryButton/base_type = &"Button"
+PrimaryButton/colors/font_color = Color(0, 0.847765, 0, 1)

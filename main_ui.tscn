@@ -1,0 +1,109 @@
+[gd_scene format=3 uid="uid://bth6ko0sn2386"]
+
+[ext_resource type="Texture2D" uid="uid://bph3y2mwnqukp" path="res://icon.svg" id="1_2ppmm"]
+[ext_resource type="Theme" uid="uid://dvndbl0k43muf" path="res://dark_mode_theme.tres" id="1_w37m7"]
+
+[node name="MainUI" type="Control" unique_id=350260464]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_w37m7")
+
+[node name="Button" type="Button" parent="." unique_id=648163813]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -414.0
+offset_top = -155.0
+offset_right = -16.0
+offset_bottom = -19.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Click me"
+icon = ExtResource("1_2ppmm")
+
+[node name="ColorPickerButton" type="ColorPickerButton" parent="." unique_id=1371416031]
+layout_mode = 0
+offset_left = 779.0
+offset_top = 423.0
+offset_right = 875.0
+offset_bottom = 454.0
+text = "Pick a color"
+
+[node name="CodeEdit" type="CodeEdit" parent="." unique_id=1426199913]
+layout_mode = 0
+offset_left = 907.0
+offset_top = 271.0
+offset_right = 1138.0
+offset_bottom = 459.0
+text = "var x: int = 5"
+gutters_draw_line_numbers = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1457640427]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = -283.0
+offset_right = 330.0
+offset_bottom = -23.0
+grow_vertical = 0
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1448059506]
+layout_mode = 2
+text = "12345"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=1262361821]
+layout_mode = 2
+theme_type_variation = &"PrimaryButton"
+text = "12345"
+
+[node name="Button3" type="Button" parent="VBoxContainer" unique_id=196165927]
+layout_mode = 2
+text = "12345"
+
+[node name="Button5" type="Button" parent="VBoxContainer" unique_id=2013581531]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.15186122, 0.40680802, 1, 1)
+text = "12345"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=767001265]
+layout_mode = 2
+alignment = 1
+
+[node name="Button6" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=352906360]
+layout_mode = 2
+text = "12345"
+
+[node name="Button7" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1778514060]
+layout_mode = 2
+text = "12345"
+
+[node name="Button9" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=442620835]
+layout_mode = 2
+text = "12345"
+
+[node name="Button10" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=1528766446]
+layout_mode = 2
+text = "12345"
+
+[node name="Button8" type="Button" parent="VBoxContainer/HBoxContainer" unique_id=2139182289]
+layout_mode = 2
+text = "12345"
+
+[node name="Button7" type="Button" parent="VBoxContainer" unique_id=224736853]
+layout_mode = 2
+text = "12345"
+
+[node name="Button8" type="Button" parent="VBoxContainer" unique_id=897144728]
+layout_mode = 2
+text = "12345"

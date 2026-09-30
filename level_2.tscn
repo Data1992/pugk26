@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bq6krxfsjeb1"]
 
 [ext_resource type="PackedScene" uid="uid://dublo73fax1mq" path="res://interactive_door.tscn" id="1_jg0dc"]
+[ext_resource type="PackedScene" uid="uid://bth6ko0sn2386" path="res://main_ui.tscn" id="2_nmjpi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nmjpi"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -40,3 +41,8 @@ transform = Transform3D(0.56649816, 0, -0.824063, 0, 1, 0, 0.824063, 0, 0.566498
 
 [node name="InteractiveDoor2" parent="." unique_id=365591848 instance=ExtResource("1_jg0dc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50543094, 0, -0.9508382)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=480945382]
+
+[node name="MainUI" parent="CanvasLayer" unique_id=350260464 instance=ExtResource("2_nmjpi")]
+top_level = true
