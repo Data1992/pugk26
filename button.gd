@@ -1,5 +1,6 @@
 extends Node3D
 
+signal pressed
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,3 +16,4 @@ func _on_area_3d_input_event(camera: Node, event: InputEvent, event_position: Ve
 	if event is InputEventMouseButton:
 		if event.pressed:
 			print("Button pressed")
+			pressed.emit()

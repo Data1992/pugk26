@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://ch0feiv7ee08n"]
 
+[ext_resource type="Script" uid="uid://bws71hpbx1oiw" path="res://door.gd" id="1_ba8gm"]
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rtgnb"]
-albedo_color = Color(0.27058825, 0.101960786, 0, 1)
+albedo_color = Color(0.8696952, 0.6636301, 0.201606, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_qkpic"]
 material = SubResource("StandardMaterial3D_rtgnb")
@@ -59,10 +61,12 @@ _data = {
 }
 
 [node name="Door" type="Node3D" unique_id=50553389]
+script = ExtResource("1_ba8gm")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=976323796]
 transform = Transform3D(0.08682883, 0, 0, 0, 1.1642721, 0, 0, 0, 0.50779533, 0, 0, -0.25814947)
 mesh = SubResource("BoxMesh_qkpic")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=819177675]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_xdadj")

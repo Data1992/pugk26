@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dublo73fax1mq"]
+
+[ext_resource type="PackedScene" uid="uid://ch0feiv7ee08n" path="res://door.tscn" id="1_4an7i"]
+[ext_resource type="PackedScene" uid="uid://b653orpt1qryy" path="res://button.tscn" id="2_e714g"]
+
+[node name="InteractiveDoor" type="Node3D" unique_id=721382887]
+
+[node name="Door" parent="." unique_id=50553389 instance=ExtResource("1_4an7i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.61591643, 0)
+
+[node name="Button" parent="Door" unique_id=839960816 instance=ExtResource("2_e714g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.05179715, -0.015491188, -0.44441336)
+
+[connection signal="pressed" from="Door/Button" to="Door" method="toggle"]
