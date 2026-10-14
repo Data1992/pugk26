@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bq6krxfsjeb1"]
 
 [ext_resource type="PackedScene" uid="uid://dublo73fax1mq" path="res://interactive_door.tscn" id="1_jg0dc"]
+[ext_resource type="Script" uid="uid://dd5ffvn3w81vh" path="res://level_2.gd" id="1_xdadj"]
 [ext_resource type="PackedScene" uid="uid://bth6ko0sn2386" path="res://main_ui.tscn" id="2_nmjpi"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nmjpi"]
@@ -22,6 +23,7 @@ albedo_color = Color(0.27572107, 0.47470552, 0.22683117, 1)
 material = SubResource("StandardMaterial3D_a72st")
 
 [node name="Level2" type="Node3D" unique_id=1882312600]
+script = ExtResource("1_xdadj")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1838010753]
 environment = SubResource("Environment_1y8me")
@@ -35,14 +37,26 @@ transform = Transform3D(3, 0, 0, 0, 0.05, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("BoxMesh_c52ky")
 
 [node name="InteractiveDoor" parent="." unique_id=721382887 instance=ExtResource("1_jg0dc")]
+unique_name_in_owner = true
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1818921757]
 transform = Transform3D(0.56649816, 0, -0.824063, 0, 1, 0, 0.824063, 0, 0.56649816, -1.3915645, 0.5222589, 0.41368926)
 
 [node name="InteractiveDoor2" parent="." unique_id=365591848 instance=ExtResource("1_jg0dc")]
+unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50543094, 0, -0.9508382)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=480945382]
 
 [node name="MainUI" parent="CanvasLayer" unique_id=350260464 instance=ExtResource("2_nmjpi")]
+visible = false
 top_level = true
+
+[node name="SaveButton" type="Button" parent="CanvasLayer" unique_id=284851668]
+offset_left = 13.0
+offset_top = 9.0
+offset_right = 57.0
+offset_bottom = 40.0
+text = "Save"
+
+[connection signal="pressed" from="CanvasLayer/SaveButton" to="." method="_on_save_button_pressed"]
