@@ -36,15 +36,19 @@ shadow_enabled = true
 transform = Transform3D(3, 0, 0, 0, 0.05, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("BoxMesh_c52ky")
 
-[node name="InteractiveDoor" parent="." unique_id=721382887 instance=ExtResource("1_jg0dc")]
+[node name="InteractiveDoor" parent="." unique_id=721382887 groups=["doors"] instance=ExtResource("1_jg0dc")]
 unique_name_in_owner = true
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1818921757]
 transform = Transform3D(0.56649816, 0, -0.824063, 0, 1, 0, 0.824063, 0, 0.56649816, -1.3915645, 0.5222589, 0.41368926)
 
-[node name="InteractiveDoor2" parent="." unique_id=365591848 instance=ExtResource("1_jg0dc")]
+[node name="InteractiveDoor2" parent="." unique_id=365591848 groups=["doors"] instance=ExtResource("1_jg0dc")]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.50543094, 0, -0.9508382)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42728806, 0, -0.750882)
+
+[node name="InteractiveDoor3" parent="." unique_id=1936614356 groups=["doors"] instance=ExtResource("1_jg0dc")]
+unique_name_in_owner = true
+transform = Transform3D(0.6345244, 0, 0.77290285, 0, 1, 0, -0.77290285, 0, 0.6345244, -0.7924048, 0, -1.538305)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=480945382]
 

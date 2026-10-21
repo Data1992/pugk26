@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dublo73fax1mq"]
 
 [ext_resource type="PackedScene" uid="uid://ch0feiv7ee08n" path="res://door.tscn" id="1_4an7i"]
+[ext_resource type="Script" uid="uid://cgc8lg2dwsyv3" path="res://interactive_door.gd" id="1_e714g"]
 [ext_resource type="PackedScene" uid="uid://b653orpt1qryy" path="res://button.tscn" id="2_e714g"]
 
 [node name="InteractiveDoor" type="Node3D" unique_id=721382887]
+script = ExtResource("1_e714g")
 
 [node name="Door" parent="." unique_id=50553389 instance=ExtResource("1_4an7i")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.61591643, 0)
