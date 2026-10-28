@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ce44vi1toydtp"]
+
+[ext_resource type="PackedScene" uid="uid://cgsnpq0vjfrd6" path="res://card.tscn" id="1_5pu08"]
+[ext_resource type="Resource" uid="uid://b13nk0r7rrhqc" path="res://card_pikachu.tres" id="2_na6m6"]
+
+[node name="Level4" type="Node2D" unique_id=152824687]
+
+[node name="Card" parent="." unique_id=1219326662 instance=ExtResource("1_5pu08")]
+position = Vector2(-253, 14)
+data = ExtResource("2_na6m6")
+
+[node name="Card2" parent="." unique_id=1075547775 instance=ExtResource("1_5pu08")]
+position = Vector2(151, 12)
+data = ExtResource("2_na6m6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1687991626]

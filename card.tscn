@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cgsnpq0vjfrd6"]
+
+[ext_resource type="Texture2D" uid="uid://det51cfpog24q" path="res://card.png" id="1_kikvd"]
+[ext_resource type="Script" uid="uid://cqpup4p2dxh5r" path="res://card.gd" id="1_rjlel"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qkpic"]
+size = Vector2(181, 198)
+
+[node name="Card" type="Node2D" unique_id=1219326662]
+script = ExtResource("1_rjlel")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=2042324730]
+texture = ExtResource("1_kikvd")
+
+[node name="Foreground" type="Sprite2D" parent="." unique_id=11281603]
+unique_name_in_owner = true
+position = Vector2(0.49999237, -31.999996)
+texture = SubResource("PlaceholderTexture2D_qkpic")
+
+[node name="CardName" type="Label" parent="." unique_id=1016169899]
+unique_name_in_owner = true
+offset_left = -79.0
+offset_top = 75.0
+offset_right = 81.0
+offset_bottom = 98.0
+theme_override_colors/font_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+text = "Kartenname"
+
+[node name="Health" type="Label" parent="." unique_id=1801977246]
+unique_name_in_owner = true
+offset_left = 9.0
+offset_top = 101.0
+offset_right = 80.0
+offset_bottom = 124.0
+theme_override_colors/font_color = Color(0.18359044, 0.18359044, 0.18359044, 1)
+text = "1"
+horizontal_alignment = 1

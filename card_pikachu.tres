@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="CardResource" format=3 uid="uid://b13nk0r7rrhqc"]
+
+[ext_resource type="Texture2D" uid="uid://bph3y2mwnqukp" path="res://icon.svg" id="1_4p58a"]
+[ext_resource type="Script" uid="uid://c233m0p0tq3ah" path="res://card_resource.gd" id="2_6vvjj"]
+
+[resource]
+script = ExtResource("2_6vvjj")
+card_name = "Pikachu"
+health = 5
+foreground = ExtResource("1_4p58a")
+attacks = Array[String](["Donnerschlag", "Tackle", "Silberblick"])
+metadata/_custom_type_script = "uid://c233m0p0tq3ah"
