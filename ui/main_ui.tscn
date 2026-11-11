@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bth6ko0sn2386"]
 
 [ext_resource type="Texture2D" uid="uid://bph3y2mwnqukp" path="res://icon.svg" id="1_2ppmm"]
-[ext_resource type="Theme" uid="uid://dvndbl0k43muf" path="res://dark_mode_theme.tres" id="1_w37m7"]
+[ext_resource type="Theme" uid="uid://dvndbl0k43muf" path="res://ui/dark_mode_theme.tres" id="1_w37m7"]
 
 [node name="MainUI" type="Control" unique_id=350260464]
 layout_mode = 3

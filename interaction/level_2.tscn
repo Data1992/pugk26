@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://bq6krxfsjeb1"]
 
-[ext_resource type="PackedScene" uid="uid://dublo73fax1mq" path="res://interactive_door.tscn" id="1_jg0dc"]
-[ext_resource type="Script" uid="uid://dd5ffvn3w81vh" path="res://level_2.gd" id="1_xdadj"]
-[ext_resource type="PackedScene" uid="uid://bth6ko0sn2386" path="res://main_ui.tscn" id="2_nmjpi"]
+[ext_resource type="Script" uid="uid://dd5ffvn3w81vh" path="res://interaction/level_2.gd" id="1_rg7e3"]
+[ext_resource type="PackedScene" uid="uid://dublo73fax1mq" path="res://interaction/interactive_door.tscn" id="2_kerke"]
+[ext_resource type="PackedScene" uid="uid://bth6ko0sn2386" path="res://ui/main_ui.tscn" id="3_f5ftt"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_nmjpi"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -23,7 +23,7 @@ albedo_color = Color(0.27572107, 0.47470552, 0.22683117, 1)
 material = SubResource("StandardMaterial3D_a72st")
 
 [node name="Level2" type="Node3D" unique_id=1882312600]
-script = ExtResource("1_xdadj")
+script = ExtResource("1_rg7e3")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1838010753]
 environment = SubResource("Environment_1y8me")
@@ -36,23 +36,23 @@ shadow_enabled = true
 transform = Transform3D(3, 0, 0, 0, 0.05, 0, 0, 0, 5, 0, 0, 0)
 mesh = SubResource("BoxMesh_c52ky")
 
-[node name="InteractiveDoor" parent="." unique_id=721382887 groups=["doors"] instance=ExtResource("1_jg0dc")]
+[node name="InteractiveDoor" parent="." unique_id=721382887 groups=["doors"] instance=ExtResource("2_kerke")]
 unique_name_in_owner = true
 
 [node name="Camera3D" type="Camera3D" parent="." unique_id=1818921757]
 transform = Transform3D(0.56649816, 0, -0.824063, 0, 1, 0, 0.824063, 0, 0.56649816, -1.3915645, 0.5222589, 0.41368926)
 
-[node name="InteractiveDoor2" parent="." unique_id=365591848 groups=["doors"] instance=ExtResource("1_jg0dc")]
+[node name="InteractiveDoor2" parent="." unique_id=365591848 groups=["doors"] instance=ExtResource("2_kerke")]
 unique_name_in_owner = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.42728806, 0, -0.750882)
 
-[node name="InteractiveDoor3" parent="." unique_id=1936614356 groups=["doors"] instance=ExtResource("1_jg0dc")]
+[node name="InteractiveDoor3" parent="." unique_id=1936614356 groups=["doors"] instance=ExtResource("2_kerke")]
 unique_name_in_owner = true
 transform = Transform3D(0.6345244, 0, 0.77290285, 0, 1, 0, -0.77290285, 0, 0.6345244, -0.7924048, 0, -1.538305)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=480945382]
 
-[node name="MainUI" parent="CanvasLayer" unique_id=350260464 instance=ExtResource("2_nmjpi")]
+[node name="MainUI" parent="CanvasLayer" unique_id=350260464 instance=ExtResource("3_f5ftt")]
 visible = false
 top_level = true
 

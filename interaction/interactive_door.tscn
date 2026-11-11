@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dublo73fax1mq"]
 
-[ext_resource type="PackedScene" uid="uid://ch0feiv7ee08n" path="res://door.tscn" id="1_4an7i"]
-[ext_resource type="Script" uid="uid://cgc8lg2dwsyv3" path="res://interactive_door.gd" id="1_e714g"]
-[ext_resource type="PackedScene" uid="uid://b653orpt1qryy" path="res://button.tscn" id="2_e714g"]
+[ext_resource type="PackedScene" uid="uid://ch0feiv7ee08n" path="res://interaction/door.tscn" id="1_4an7i"]
+[ext_resource type="Script" uid="uid://cgc8lg2dwsyv3" path="res://interaction/interactive_door.gd" id="1_e714g"]
+[ext_resource type="PackedScene" uid="uid://b653orpt1qryy" path="res://interaction/button.tscn" id="2_e714g"]
 
 [node name="InteractiveDoor" type="Node3D" unique_id=721382887]
 script = ExtResource("1_e714g")

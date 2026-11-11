@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cgsnpq0vjfrd6"]
 
-[ext_resource type="Texture2D" uid="uid://det51cfpog24q" path="res://card.png" id="1_kikvd"]
-[ext_resource type="Script" uid="uid://cqpup4p2dxh5r" path="res://card.gd" id="1_rjlel"]
+[ext_resource type="Texture2D" uid="uid://det51cfpog24q" path="res://resources/card.png" id="1_kikvd"]
+[ext_resource type="Script" uid="uid://cqpup4p2dxh5r" path="res://resources/card.gd" id="1_rjlel"]
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_qkpic"]
 size = Vector2(181, 198)
